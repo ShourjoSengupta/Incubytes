@@ -45,6 +45,20 @@ int main() {
 
     cout << "Chandrayaan right movement test passed!" << endl;
 
+    obj.up();
+    assert(obj.direction == 'U');
+    assert(obj.x == 0);
+    assert(obj.y == 0);
+    assert(obj.z == 0);
 
+    cout << "Chandrayaan up movement test passed!" << endl;
+
+    obj.down();
+    assert(obj.direction == 'D');
+    assert(obj.x == 0);
+    assert(obj.y == 0);
+    assert(obj.z == 0);
+
+    cout << "Chandrayaan down movement test passed!" << endl;
     return 0;
 }

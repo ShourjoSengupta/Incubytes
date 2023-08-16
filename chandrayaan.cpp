@@ -56,6 +56,14 @@ public:
         else if (direction == 'D') direction = 'S';
     }
 
+    void up() {
+        if (direction == 'N' || direction == 'S'||direction == 'E' || direction == 'W'|| direction == 'D') direction = 'U';
+    }
+
+    void down() {
+        if (direction == 'N' || direction == 'S'||direction == 'E' || direction == 'W'|| direction == 'U' ) direction = 'D';
+    }
+
 
 
 public:
