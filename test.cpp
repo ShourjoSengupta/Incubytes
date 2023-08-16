@@ -88,6 +88,18 @@ int main() {
 
     cout << "Chandrayaan run method test cases passed!" << endl;
 
+     Chandrayaan obj3(0, 0, 0, 'N');
+
+    
+    obj3.run({"f", "r", "u", "b", "l"});
+    
+     
+    assert(obj3.x == 0); 
+    assert(obj3.y == 1); 
+    assert(obj3.z == -1); 
+    assert(obj3.direction == 'N');
+    cout << "Chandrayaan run method test cases passed!" << endl;
+    obj3.display(); 
 
     return 0;
 }
