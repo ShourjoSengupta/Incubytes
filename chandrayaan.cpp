@@ -47,6 +47,15 @@ public:
         else if (direction == 'U') direction = 'N';
         else if (direction == 'D') direction = 'S';
     }
+     void right() {
+        if (direction == 'N') direction = 'E';
+        else if (direction == 'S') direction = 'W';
+        else if (direction == 'E') direction = 'S';
+        else if (direction == 'W') direction = 'N';
+        else if (direction == 'U') direction = 'N';
+        else if (direction == 'D') direction = 'S';
+    }
+
 
 
 public:

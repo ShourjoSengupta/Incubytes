@@ -37,5 +37,14 @@ int main() {
 
     cout << "Chandrayaan left movement test passed!" << endl;
 
+    obj.right();
+    assert(obj.direction == 'N');
+    assert(obj.x == 0);
+    assert(obj.y == 0);
+    assert(obj.z == 0);
+
+    cout << "Chandrayaan right movement test passed!" << endl;
+
+
     return 0;
 }
