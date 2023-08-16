@@ -85,3 +85,52 @@ public:
     int x, y, z;
     char direction;
 };
+
+int main() {
+    // Initialize variables for user input
+    vector<int> initialPosition(3); // Vector for initial position (x, y, z)
+    char initialDirection;
+
+    cout << "Enter initial X coordinate: ";
+    cin >> initialPosition[0];
+
+    cout << "Enter initial Y coordinate: ";
+    cin >> initialPosition[1];
+
+    cout << "Enter initial Z coordina0te: ";
+    cin >> initialPosition[2];
+
+    cout << "Enter initial direction (N/S/E/W): ";
+    cin >> initialDirection;
+
+    // Validate initialDirection
+    if (initialDirection != 'N' && initialDirection != 'S' &&
+        initialDirection != 'E' && initialDirection != 'W') {
+        cout << "Invalid initial direction. Exiting program.\n";
+        return 1;
+    }
+
+    // Initialize the Chandrayaan
+    Chandrayaan obj(initialPosition[0], initialPosition[1], initialPosition[2], initialDirection);
+
+   vector<string> commands;
+    cout << "Enter commands (f=forward, b=backward, l=left, r=right, u=up, d=down),"
+            " or enter stop to finish:\n";
+
+    while (true) {
+        string command;
+        cout << "Enter command: ";
+        cin >> command;
+
+        if (command=="stop") {
+            break;
+        }
+
+        commands.push_back(command);
+    }
+    // Execute commands and display position
+    obj.run(commands);
+    obj.display();
+
+    return 0;
+}
