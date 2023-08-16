@@ -60,5 +60,34 @@ int main() {
     assert(obj.z == 0);
 
     cout << "Chandrayaan down movement test passed!" << endl;
+    Chandrayaan obj1(0, 0, 0, 'N');
+    obj1.run({"f"});
+    assert(obj1.x == 0);
+    assert(obj1.y == 1);
+    assert(obj1.z == 0);
+
+    obj1.run({"b"});
+    assert(obj1.x == 0);
+    assert(obj1.y == 0);
+    assert(obj1.z == 0);
+
+    obj1.run({"l"});
+    assert(obj1.direction == 'W');
+
+  
+    obj1.run({"r"});
+    assert(obj1.direction == 'N');
+
+ 
+    obj1.run({"u"});
+    assert(obj1.direction == 'U');
+
+ 
+    obj1.run({"d"});
+    assert(obj1.direction == 'D');
+
+    cout << "Chandrayaan run method test cases passed!" << endl;
+
+
     return 0;
 }

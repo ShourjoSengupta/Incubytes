@@ -64,6 +64,21 @@ public:
         if (direction == 'N' || direction == 'S'||direction == 'E' || direction == 'W'|| direction == 'U' ) direction = 'D';
     }
 
+    void run(const vector<string>& commands) {
+        for (const string& command : commands) {
+            if (command == "f") forward();
+            else if (command == "b") backward();
+            else if (command == "l") left();
+            else if (command == "r") right();
+            else if (command == "u") up();
+            else if (command == "d") down();
+        }
+    }
+
+    void display() {
+        cout << "Position: (" << x << ", " << y << ", " << z << ")\n";
+        cout << "Direction: " << direction << "\n";
+    }
 
 
 public:
