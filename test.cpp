@@ -12,5 +12,11 @@ int main() {
 
     cout << "Chandrayaan constructor test passed!" << endl;
 
+    obj.forward();
+    assert(obj.x == 1);
+    assert(obj.y == 0);
+    assert(obj.z == 0);
+
+    cout << "Chandrayaan forward movement test passed!" << endl;
     return 0;
 }
